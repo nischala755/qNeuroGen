@@ -1,72 +1,91 @@
-🧠⚛️ QNeuroGen: Quantum-Enhanced EEG Neural Decoding System
-Brain-Computer Interface combining Quantum Machine Learning with Neuroscience
+# 🧠⚛️ QNeuroGen: Quantum-Enhanced EEG Neural Decoding System
 
-QNeuroGen represents a  fusion of quantum computing, neuroscience, and artificial intelligence to create the next generation of brain-computer interfaces. This system achieves real-time mental state classification from EEG signals using hybrid quantum-classical neural networks.
-🌟 Key Highlights
+**QNeuroGen** is a cutting-edge Brain-Computer Interface (BCI) system that integrates **quantum computing**, **neuroscience**, and **artificial intelligence**. It leverages **hybrid quantum-classical neural networks** to achieve **real-time mental state classification** from EEG signals.
 
-🎯 89.2% Accuracy in 4-class mental state classification
-⚛️ Quantum Advantage demonstrated with 12% improvement over classical methods
-🚀 Real-time Processing with <50ms latency
-🧠 Multi-modal EEG Analysis across 32 channels
-🔬 Novel Quantum Feature Extraction using variational quantum circuits
+---
 
-🏆 Project Achievements
-Technical Innovation
+## 🌟 Key Highlights
 
-✅ First implementation of quantum-enhanced EEG analysis
-✅ Hybrid quantum-classical neural network architecture
-✅ Real-time brain signal processing pipeline
-✅ Advanced spectral and temporal feature extraction
-✅ Interactive visualization dashboard
+- 🎯 **Accuracy**: 89.2% in 4-class mental state classification  
+- ⚛️ **Quantum Advantage**: 12% improvement over classical methods  
+- 🚀 **Real-Time Processing**: <50ms latency  
+- 🧠 **Multi-Modal EEG Analysis**: 32 EEG channels  
+- 🔬 **Quantum Feature Extraction**: Variational Quantum Circuits (VQCs)
 
-Performance Metrics
+---
 
-Test Accuracy: 89.2%
-Real-time Accuracy: 86.7%
-Macro F1-Score: 0.888
-Mean AUC: 0.912
-Processing Latency: 45ms average
+## 🏆 Project Achievements
 
-🔬 Technical Architecture
-Quantum Components
+### 🚀 Technical Innovations
+- ✅ First implementation of **quantum-enhanced EEG analysis**
+- ✅ **Hybrid quantum-classical neural network** architecture
+- ✅ Real-time **brain signal processing pipeline**
+- ✅ Advanced **spectral and temporal feature extraction**
+- ✅ Interactive **visualization dashboard**
 
-Variational Quantum Circuits: 4-qubit feature encoding
-Quantum Feature Mapping: Angle embedding with parameterized rotations
-Amplitude Embedding: Probability amplitude encoding
-Quantum Fourier Transform: Frequency domain quantum features
+### 📊 Performance Metrics
+| Metric              | Value       |
+|---------------------|-------------|
+| Test Accuracy       | 89.2%       |
+| Real-time Accuracy  | 86.7%       |
+| Macro F1-Score      | 0.888       |
+| Mean AUC            | 0.912       |
+| Avg. Latency        | 45ms        |
 
-Classical Components
+---
 
-Deep Neural Network: Multi-layer hybrid architecture
-Advanced Preprocessing: Bandpass filtering and artifact removal
-Feature Engineering: Spectral power and temporal statistics
-Real-time Pipeline: Streaming EEG processing
+## 🔬 Technical Architecture
 
-📊 Dataset & Methodology
-Synthetic EEG Dataset
+### 🧠 Quantum Components
+- **Variational Quantum Circuits**: 4-qubit parameterized rotations
+- **Angle Embedding**: Quantum feature encoding
+- **Amplitude Embedding**: Probabilistic representation of classical vectors
+- **Quantum Fourier Transform**: Frequency-domain quantum features
 
-4 Mental States: Focused, Relaxed, Excited, Drowsy
-200 Samples: 50 trials per mental state
-32 EEG Channels: Realistic spatial distribution
-4-second Epochs: 250Hz sampling rate
+### 🤖 Classical Components
+- **Deep Neural Network**: Multi-layer hybrid architecture
+- **Preprocessing**: Bandpass filtering, artifact rejection
+- **Feature Engineering**: Spectral power, statistical temporal features
+- **Streaming Pipeline**: Real-time EEG signal classification
 
-<img width="773" height="283" alt="image" src="https://github.com/user-attachments/assets/38b6b3a5-660a-43be-9fc9-5b894941d3a5" />
+---
 
-Python 3.8+
-CUDA-compatible GPU (optional, for acceleration)
+## 📚 Dataset & Methodology
 
-# Clone repository
+- **Mental States**: Focused, Relaxed, Excited, Drowsy  
+- **Samples**: 200 total (50 trials per class)  
+- **EEG Channels**: 32 (realistic spatial layout)  
+- **Epoch Duration**: 4 seconds  
+- **Sampling Rate**: 250Hz  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/38b6b3a5-660a-43be-9fc9-5b894941d3a5" width="700"/>
+</p>
+
+---
+
+## ⚙️ Installation & Setup
+
+### 🐍 Prerequisites
+
+- Python 3.8+
+- CUDA-compatible GPU (optional)
+
+### 🔧 Setup Instructions
+
+```bash
+# Clone the repository
 git clone https://github.com/yourusername/qneurogen.git
 cd qneurogen
 
-# Create virtual environment
+# Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Install quantum libraries
+# Install quantum ML libraries
 pip install pennylane cirq qiskit
 
 from qneurogen import QNeuroGen
@@ -82,63 +101,65 @@ features = qng.preprocess(eeg_data)
 prediction = qng.classify(features)
 print(f"Predicted mental state: {prediction}")
 
-🎯 Applications & Impact
-Medical Applications
+import requests
 
-Assistive Technology: Control devices for paralyzed patients
-Neurofeedback: Real-time brain training systems
-Cognitive Assessment: Objective mental state evaluation
-Rehabilitation: Post-stroke cognitive recovery
-
-Consumer Applications
-
-Gaming: Thought-controlled gaming interfaces
-Wellness: Mental health monitoring systems
-Education: Attention and learning optimization
-Productivity: Focus and fatigue detection
-
-Research Applications
-
-Neuroscience: Brain connectivity analysis
-Quantum ML: Quantum advantage in biological signals
-BCI Research: Next-generation brain interfaces
-Cognitive Science: Mental state dynamics
-
-🔬 Scientific Contributions
-Novel Methodologies
-
-Quantum Feature Extraction: First application of variational quantum circuits to EEG signals
-Hybrid Architecture: Optimal fusion of quantum and classical processing
-Real-time Quantum Processing: Efficient quantum computation for streaming data
-Quantum Advantage Demonstration: Empirical proof of quantum superiority
-
-Published Results
-
-12% Improvement over classical methods
-Sub-50ms Latency for real-time applications
-Cross-subject Generalization demonstrated
-Robust Performance across different EEG conditions
-
-🔧 API Usage
-REST API Endpoint
-pythonimport requests
-
-# Real-time EEG classification
 response = requests.post('http://localhost:5000/classify_eeg', 
-                        json={'eeg_data': eeg_array})
+                         json={'eeg_data': eeg_array})
 
 result = response.json()
 print(f"Mental State: {result['predicted_state']}")
 print(f"Confidence: {result['confidence']:.2f}")
-Python SDK
-pythonfrom qneurogen import RealTimeProcessor
+
+from qneurogen import RealTimeProcessor
 
 # Initialize processor
 processor = RealTimeProcessor()
 
-# Start real-time processing
+# Start EEG stream
 processor.start_stream()
 
 # Get continuous predictions
 for prediction in processor.get_predictions():
     print(f"State: {prediction.state}, Confidence: {prediction.con}")
+
+
+Applications & Impact
+🏥 Medical
+Assistive tech for paralysis
+
+Neurofeedback systems
+
+Cognitive assessments
+
+Stroke rehabilitation
+
+🎮 Consumer
+Thought-controlled gaming
+
+Mental wellness monitoring
+
+Education optimization tools
+
+Productivity tracking
+
+🧪 Research
+Neuroscience of mental states
+
+Quantum ML for biosignals
+
+Next-gen BCI experimentation
+
+Cognitive state modeling
+
+📚 Scientific Contributions
+✅ First application of VQCs to EEG neural decoding
+
+✅ Hybrid architecture for real-time brain decoding
+
+✅ Demonstrated quantum advantage over classical models
+
+✅ Published metrics proving generalizability and robustness
+
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
